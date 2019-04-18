@@ -13,23 +13,35 @@ export const Navigation = ({ className }: Props) => {
   const isManager = useMappedState(getUserIsManager)
 
   const defaultMenu = [
-    <MenuItem id="home" selected>
+    <MenuItem key="home" id="home" selected>
       Home
     </MenuItem>,
-    <MenuItem id="stats" onClick={() => pushRoute('/app/stats')}>
+    <MenuItem key="stats" id="stats" onClick={() => pushRoute('/app/stats')}>
       Stats
     </MenuItem>,
-    <MenuItem id="history" onClick={() => pushRoute('/app/history')}>
+    <MenuItem
+      key="history"
+      id="history"
+      onClick={() => pushRoute('/app/history')}
+    >
       History
     </MenuItem>,
-    <MenuItem id="profile" onClick={() => pushRoute('/app/profile')}>
+    <MenuItem
+      key="profile"
+      id="profile"
+      onClick={() => pushRoute('/app/profile')}
+    >
       Profile
     </MenuItem>,
   ]
 
   const managerMenu = isManager
     ? [
-        <MenuItem id="manager" onClick={() => pushRoute('/manager')}>
+        <MenuItem
+          key="manager"
+          id="manager"
+          onClick={() => pushRoute('/manager')}
+        >
           Manager
         </MenuItem>,
       ]
