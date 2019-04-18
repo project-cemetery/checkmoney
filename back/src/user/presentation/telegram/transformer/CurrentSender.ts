@@ -14,6 +14,7 @@ export class CurrentSender implements ContextTransformer<TokenPayloadModel> {
     return {
       login: user.login,
       isManager: user.isManager,
+      verificated: user.verificated,
     }
   }
 }

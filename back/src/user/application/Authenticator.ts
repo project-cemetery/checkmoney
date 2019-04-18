@@ -49,6 +49,7 @@ export class Authenticator {
     return {
       login: user.login,
       isManager: user.isManager,
+      verificated: user.verificated,
     }
   }
 }

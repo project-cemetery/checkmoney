@@ -20,6 +20,9 @@ export class User {
   @Column()
   private telegramId: string | undefined
 
+  @Column()
+  public verificated: boolean = false
+
   public constructor(login: string) {
     this.login = login
 
