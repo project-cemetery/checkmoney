@@ -7,7 +7,7 @@ ALTER TABLE public.outcome ALTER COLUMN currency TYPE character varying;
 
 ALTER TABLE public."user" ALTER COLUMN "profile_defaultcurrency" TYPE character varying;
 
-DROP TYPE public.currency CASCADE;
+DROP TYPE IF EXISTS public.currency CASCADE;
 
 #DOWN
 
