@@ -30,12 +30,8 @@ cp .env.dist .env
 ```sh
 cd back
 yarn start:back:dev
- 
-cd front
-yarn start:front:dev
 ```
 
-**front running on localhost:3001**   
 **back running on localhost:3000**
 
 ### Commit
