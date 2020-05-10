@@ -18,21 +18,9 @@ jobs:
         PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
     - name: Push back image
       run: docker push igorkamyshev/checkmoney-back
-  build_front:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v1
-    - name: Build front image
-      run: docker build -t igorkamyshev/checkmoney-front -f Dockerfile-front .
-    - name: Login to Dockerhub
-      run: echo "$PASSWORD" | docker login --username igorkamyshev --password-stdin
-      env:
-        PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-    - name: Push front image
-      run: docker push igorkamyshev/checkmoney-front
   deploy:
     runs-on: ubuntu-latest
-    needs: [build_back, build_front]
+    needs: [build_back]
     steps:
     - name: Deploy on server
       uses: maddox/actions/ssh@064c408aac15c33fbdeb1cee155a529d6fbb13ff

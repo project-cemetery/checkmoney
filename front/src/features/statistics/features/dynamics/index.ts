@@ -1,1 +1,0 @@
-export { Dynamics } from './Dynamics';

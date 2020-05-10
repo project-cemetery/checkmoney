@@ -1,1 +1,0 @@
-export { useIncomeModal } from './useIncomeModal';

@@ -1,1 +1,0 @@
-export { Google } from './Google';

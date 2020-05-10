@@ -1,1 +1,0 @@
-export { CreateTip } from './CreateTip';

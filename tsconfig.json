@@ -6,16 +6,9 @@
     "experimentalDecorators": true,
     "paths": {
       "&back/*": ["./back/src/*"],
-      "&front/*": ["./front/src/*"],
-      "&landing/*": ["./landing/src/interactive/*"],
       "&shared/*": ["./shared/*"]
     }
   },
-  "include": [
-    "back/src/**/*",
-    "front/src/**/*",
-    "landing/src/interactive/*",
-    "shared/**/*"
-  ],
-  "exclude": ["node_modules/**/*", "front/node_modules/**/*"]
+  "include": ["back/src/**/*", "shared/**/*"],
+  "exclude": ["node_modules/**/*"]
 }
